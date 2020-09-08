@@ -1,5 +1,6 @@
 const express = require('express');
-const router = require('./lib/routes/routes_master')
+const product_route = require('./lib/routes/product_route')
+const category_route = require('./lib/routes/category_route')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
@@ -14,7 +15,8 @@ app.use(bodyParser.json());
 mongoose.connect('mongodb://localhost/mystore', { useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 
-app.use('/api', router);
+app.use('/api/products', product_route);
+app.use('/api/categories', category_route);
 
 app.listen(port, () => {
   console.log(`MyStore app listening at http://localhost:${port}`);
