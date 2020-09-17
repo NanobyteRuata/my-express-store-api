@@ -17,8 +17,12 @@
   },
   "homepage": "https://github.com/NanobyteRuata/my-express-store-api#readme",
   "dependencies": {
+    "accesscontrol": "^2.2.1",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.1",
     "mongoose": "^5.10.3"
   }
